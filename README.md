@@ -1,8 +1,17 @@
 # Brainwave
-Run The Application
-npm install
-ng serve
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+# Project Title
+
+## Run the Application
+
+To run the application, follow these steps:
+
+1. **Install Dependencies**
+
+   Run the following command to install the required dependencies:
+
+   ```bash
+   npm install
 
 ## Screenshot
 
