@@ -1,0 +1,66 @@
+<div class="form-container">
+    <h2 class="form-headline">Contact Form</h2>
+    <form (submit)="onSubmit()">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="first_name">First Name:</label>
+          <input type="text" id="first_name" [(ngModel)]="contact.first_name" name="first_name" required />
+        </div>
+        <div class="form-field">
+          <label for="last_name">Last Name:</label>
+          <input type="text" id="last_name" [(ngModel)]="contact.last_name" name="last_name" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="emailId">Email:</label>
+          <input type="email" id="emailId" [(ngModel)]="contact.emailId" name="emailId" required />
+        </div>
+        <div class="form-field">
+          <label for="age">Age:</label>
+          <input type="number" id="age" [(ngModel)]="contact.age" name="age" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="gender">Gender:</label>
+          <select id="gender" [(ngModel)]="contact.gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="mobilenumber">Mobile Number:</label>
+          <input type="text" id="mobilenumber" [(ngModel)]="contact.mobilenumber" name="mobilenumber" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="pan_no">PAN No:</label>
+          <input type="text" id="pan_no" [(ngModel)]="contact.pan_no" name="pan_no" required />
+        </div>
+        <div class="form-field">
+          <label for="adhaar_no">Aadhaar No:</label>
+          <input type="text" id="adhaar_no" [(ngModel)]="contact.adhaar_no" name="adhaar_no" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="status">Status:</label>
+          <input type="checkbox" id="status" [(ngModel)]="contact.status" name="status" />
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+      <button type="button" (click)="onUpdate()">Update</button>
+      <button type="button" (click)="onDelete()">Delete</button>
+    </form>
+  </div>
+  
+  <h3>Fetched Contact:</h3>
+  <div *ngIf="fetchedContact">
+    <p><strong>Name:</strong> {{ fetchedContact.first_name }} {{ fetchedContact.last_name }}</p>
+    <p><strong>Email:</strong> {{ fetchedContact.emailId }}</p>
+    <p><strong>Mobile:</strong> {{ fetchedContact.mobilenumber }}</p>
+  </div>
+  

@@ -1,0 +1,52 @@
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .form-headline {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 10px; /* Space between fields */
+    margin-bottom: 10px; /* Space between rows */
+  }
+  
+  .form-field {
+    flex: 1; /* Each field takes up equal space */
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input, select, button {
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+  }
+  
+  button {
+    margin-top: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button[type="button"] {
+    background-color: #f44336; /* Red */
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
